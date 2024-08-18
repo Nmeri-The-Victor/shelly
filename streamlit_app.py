@@ -1,6 +1,6 @@
 import streamlit as st
 from time import sleep
-from navigation import make_sidebar
+# from navigation import make_sidebar
 
 
 st.title("Shelly, Your Personal Study Assistant.")
@@ -24,7 +24,7 @@ if option == "Login":
             st.success("Logged in successfully!")
             st.session_state["auth"] = True
             sleep(0.5)
-            st.switch_page("app.py")
+            st.switch_page("pages/app.py")
         else:
             st.session_state["auth"] = False
             st.error("Incorrect username or password")
@@ -37,5 +37,5 @@ else:
             st.success("Signup successfully!")
             st.session_state["auth"] = True
             sleep(0.5)
-            st.switch_page("app.py")
+            st.switch_page("pages/app.py")
         
